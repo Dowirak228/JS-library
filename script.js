@@ -38,4 +38,4 @@ addBookToLibrary("Harry Potter 2", "J.K.Rowling", "500", "Read");
 addBookToLibrary("Harry Potter 3", "J.K.Rowling", "300", "Not Read yet");
 addBookToLibrary("Harry Potter 4", "J.K.Rowling", "700", "Not Read yet");
 //console.log(myLibrary);
-displayBookOnPage()
+displayBookOnPage() 
