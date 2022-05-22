@@ -18,14 +18,14 @@
       </div>
       <div class="form border">
          <button class="add_book_button">Add New Book</button>
-         <div id="add_book_form">
+         <div id="add_book_form" style="display: none;">
             <form action="#" id="add_book">
                <label for="Title">Title</label>
                <input minlength="2" type="text" id="Title" name="Title">
                <label for="Author">Author</label>
                <input minlength="2" type="text" id="Author" name="Author">
                <label for="Pages">Pages</label>
-               <input minlength="1" type="text" id="Pages" name="Pages">
+               <input min="0" max="9" type="number" id="Pages" name="Pages">
                <label for="Read">Read</label>
                <input minlength="2" type="text" id="Read" name="Read">
             </form>
