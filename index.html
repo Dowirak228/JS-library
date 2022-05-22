@@ -21,16 +21,18 @@
          <div id="add_book_form">
             <form action="#" id="add_book">
                <label for="Title">Title</label>
-               <input type="text" id="Title" name="Title">
+               <input minlength="2" type="text" id="Title" name="Title">
                <label for="Author">Author</label>
-               <input type="text" id="Author" name="Author">
+               <input minlength="2" type="text" id="Author" name="Author">
                <label for="Pages">Pages</label>
-               <input type="text" id="Pages" name="Pages">
+               <input minlength="1" type="text" id="Pages" name="Pages">
                <label for="Read">Read</label>
-               <input type="text" id="Read" name="Read">
+               <input minlength="2" type="text" id="Read" name="Read">
             </form>
-            <button type="submit" class="submit_button"></button>
-            <button type="reset" class="reset_button"></button>
+            <div class="buttons">
+               <button type="submit" class="submit_button btn">Submit</button>
+               <button type="reset" class="reset_button btn">Reset</button>
+            </div>
          </div>
       </div>
       <div class="books border"></div>
