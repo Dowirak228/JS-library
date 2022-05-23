@@ -39,7 +39,7 @@ function displayBookOnPage() {
       console.log('show me current array object inside for eaach', myLibrary);
 
       removeBookButton.dataset.linkedArray = index;
-      index++;
+      
       console.log("SHow me the dataset", removeBookButton.dataset.linkedArray);
       card.appendChild(removeBookButton);
 
@@ -53,6 +53,35 @@ function displayBookOnPage() {
          displayBookOnPage();
       }
 
+      // Create read status button
+      const readStatusButton = document.createElement('button');
+      readStatusButton.classList.add('read_status_button');
+      readStatusButton.textContent = "Toggle Read Status";
+
+      // Link the data attributes
+      readStatusButton.dataset.linkedArray = index;
+      card.appendChild(readStatusButton);
+
+      // Add Event Listener to read status button
+      readStatusButton.addEventListener('click', toggleReadStatus);
+
+      function toggleReadStatus() {
+         let retrieveBookToToggle = readStatusButton.dataset.linkedArray;
+        // Book.prototype = Object.create(Book.prototype);
+        // const toggleBook = new Book();
+         console.log(myLibrary[parseInt(retrieveBookToToggle)].Read);
+
+         if ((myLibrary[parseInt(retrieveBookToToggle)].Read) == "Yes") {
+            //toggleBook.Read = "No";
+            myLibrary[parseInt(retrieveBookToToggle)].Read = "No";
+         } else if ((myLibrary[parseInt(retrieveBookToToggle)].Read) == "No") {
+            //toggleBook.Read = "Yes";
+            myLibrary[parseInt(retrieveBookToToggle)].Read = "Yes";
+         }
+         displayBookOnPage();
+      }
+
+
       // Display each card
       for (let key in myLibraries) {
          //console.log(`${key}: ${myLibrary[key]}`);
@@ -61,6 +90,8 @@ function displayBookOnPage() {
          card.appendChild(pText)
          //console.log(pText);
       }
+
+      index++;
    })
 }
 

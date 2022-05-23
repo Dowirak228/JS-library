@@ -46,10 +46,20 @@
    position: absolute;
    left: 0;
    top: 0;
-   padding: 6px 10px;
+   padding: 6px 8px;
    background-color: red;
    color: #fff;
-   font-size: 1.1rem;
+   font-size: 1rem;
+}
+
+.read_status_button {
+   position: absolute;
+   right: 0;
+   top: 0;
+   padding: 6px 8px;
+   background-color: rgb(0, 101, 145);
+   color: #fff;
+   font-size: 1rem;
 }
 
 #add_book_form {
