@@ -22,18 +22,20 @@ function displayBookOnPage() {
    console.log("Show me", removeCards);
    for (let i = 0; i < removeCards.length; i++) {
       removeCards[i].remove()
+      console.log(removeCards[i]);
    }
    
-   myLibrary.forEach(myLibrary => {
+   myLibrary.forEach(myLibraries => {
       const card = document.createElement('div');
       card.classList.add('card');
       books.appendChild(card)
 
-      for (let key in myLibrary) {
+
+      for (let key in myLibraries) {
          //console.log(`${key}: ${myLibrary[key]}`);
          const pText = document.createElement('p');
          card.appendChild(pText)
-         pText.textContent = `${key}: ${myLibrary[key]}`
+         pText.textContent = `${key}: ${myLibraries[key]}`
          //console.log(pText);
       }
    })
