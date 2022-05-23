@@ -39,6 +39,17 @@
    grid-template-rows: auto;
    box-shadow: 0px 0px 10px rgb(198, 198, 198);
    border-radius: 10px;
+   position: relative;
+}
+
+.remove_book_button {
+   position: absolute;
+   left: 0;
+   top: 0;
+   padding: 6px 10px;
+   background-color: red;
+   color: #fff;
+   font-size: 1.1rem;
 }
 
 #add_book_form {
